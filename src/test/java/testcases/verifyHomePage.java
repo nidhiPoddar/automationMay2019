@@ -17,7 +17,7 @@ public class verifyHomePage {
 		WebDriver driver = BrowserFactory.getBrowser("firefox");
 		driver.get(DataProviderFactory.getConfigObj().getApplicationUrl());
 		HomePage homePageObj = PageFactory.initElements(driver, HomePage.class);
-		
+		System.out.println("***********************");
 		String appTitle = homePageObj.getApplicationTitle();
 		System.out.println("the page title is "+appTitle);
 		Assert.assertTrue(appTitle.contains("Shop"));
